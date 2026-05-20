@@ -23,3 +23,8 @@ Route::post('/movies',[MovieController::class, 'store'])->name('movies.store');
 Route::put('/movies/{id}',[MovieController::class, 'update'])->name('movies.update');
 Route::get('/movies/{id}',[MovieController::class, 'edit'])->middleware('movie')->name('movies.edit');
 Route::delete('/movies/{id}',[MovieController::class, 'destroy'])->name('movies.destroy');
+
+
+Route::get('/api-post', function(){
+    return view('api.index');
+});
